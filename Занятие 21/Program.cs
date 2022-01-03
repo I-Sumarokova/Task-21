@@ -48,14 +48,11 @@ namespace Занятие_21
             m = Convert.ToInt32(Console.ReadLine());
             array = new int[n, m];
 
-            Thread myThread = new Thread(sadovnik1);
-            Thread myThread1 = new Thread(sadovnik2);
-
+            ThreadStart threadStart = new ThreadStart(sadovnik1);
+            Thread myThread = new Thread(threadStart);
             myThread.Start();
-            myThread1.Start();
+            sadovnik2();
 
-            myThread.Join();
-            myThread1.Join();
 
             for (int i = 0; i < n; i++)
             {
