@@ -62,6 +62,7 @@ namespace Занятие_21
                 }
                 Console.WriteLine();
             }
+            Console.WriteLine();
             Console.ReadLine();
         }
     }
